@@ -13,7 +13,25 @@
  * @returns {number[]}
  */
 function union(a, b) {
-    return undefined;
+    var resArr = [];
+    for (var i = 0; i < a.length; i++) {
+        for (var j = 0; j < b.length; j++) {
+            if (a[i] === b[j] && !resArr.includes(a[i])) {
+                resArr.push(a[i]);
+            }
+        }
+    }
+    // a.forEach(element => {
+    //     if (b.includes(element) && !resArr.includes(element)) {
+    //       resArr.push(element);
+    //     }
+    //   });
+
+    function compareNumbers(a, b) {
+        //делаем упорядоченный по возрастанию масси
+        return a - b;
+    }
+    return resArr.sort(compareNumbers);
 }
 
 module.exports = union;
