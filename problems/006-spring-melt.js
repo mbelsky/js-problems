@@ -18,7 +18,23 @@
  * @returns {number}
  */
 function getSpringMeltStreak(temperature) {
-    return undefined;
+    var count = 0;
+    var resArr = [];
+    temperature.forEach(function(element, index, array) {
+        if (element > 0) {
+            count++;
+        }
+        if (index == array.length - 1 || element <= 0) {
+            resArr.push(count);
+            count = 0;
+        }
+    });
+    function compareNumbers(a, b) {
+        return b - a;
+    }
+    resArr.sort(compareNumbers);
+
+    return resArr[0];
 }
 
 module.exports = getSpringMeltStreak;
