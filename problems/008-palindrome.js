@@ -13,7 +13,13 @@
  * @returns {boolean}
  */
 function isPalindrome(value) {
-    return undefined;
+    var cloneOne = value.split("");
+    for (var i = 0; i < cloneOne.length; i++) {
+        if (cloneOne[i] != cloneOne.reverse()[i]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 module.exports = isPalindrome;
