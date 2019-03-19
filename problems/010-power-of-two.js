@@ -12,7 +12,19 @@
  * @returns {number|undefined}
  */
 function getPower(n) {
-    return -1;
+    var counter = 2;
+    var powetCount = 1;
+    if (n <= 1) {
+        return 0;
+    }
+
+    while (counter < n) {
+        counter *= 2;
+        powetCount++;
+    }
+    if (Math.pow(2, powetCount) === n) {
+        return powetCount;
+    }
 }
 
 module.exports = getPower;
