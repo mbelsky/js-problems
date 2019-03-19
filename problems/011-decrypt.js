@@ -16,7 +16,23 @@
  * @returns {string}
  */
 function decrypt(secret) {
-    return undefined;
+    var distionary = "abcdefghijklmnopqrstuvwxyz";
+    var alphabet = distionary.split("");
+    var secretArr = secret.split("");
+    var result = [];
+    secretArr.forEach(function(element) {
+        if (alphabet.indexOf(element) === 25) {
+            result.push(alphabet[0]);
+        }
+        if (element === " ") {
+            result.push(" ");
+        } else {
+            var indexAlp = alphabet.indexOf(element);
+            result.push(alphabet[indexAlp + 1]);
+        }
+    });
+
+    return result.join("");
 }
 
 module.exports = decrypt;
