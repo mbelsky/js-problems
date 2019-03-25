@@ -19,7 +19,19 @@
  * @returns {boolean}
  */
 function isIpValid(address) {
-    return undefined;
+    var addr = address.split(".");
+    var currentValue;
+    if (addr.length != 4) {
+        return false;
+    }
+
+    for (var i = 0; i <= addr.length; i++) {
+        currentValue = Math.abs(addr[i]);
+        if (currentValue > 255 || currentValue == NaN) {
+            return false;
+        }
+    }
+    return true;
 }
 
 module.exports = isIpValid;
