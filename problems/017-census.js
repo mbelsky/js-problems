@@ -13,7 +13,18 @@
  * @returns {undefined|number}
  */
 function census(list) {
-    return -1;
+    for (var j = 0; j < list.length; j++) {
+        if (list[j].gender == "Male") {
+            var result;
+            var currentAge = 0;
+            for (var i = 0; i < list.length; i++) {
+                if (list[i].gender == "Male" && list[i].age > currentAge) {
+                    result = i;
+                    currentAge = list[i].age;
+                }
+            }
+            return result + 1;
+        } else return undefined;
+    }
 }
-
 module.exports = census;
