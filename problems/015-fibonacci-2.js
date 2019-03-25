@@ -14,7 +14,16 @@
  * @returns {undefined|number}
  */
 function isFibonacci(value) {
-    return undefined;
+    var line = [0, 1];
+    if (value == 0) {
+        return 0;
+    }
+    for (var i = 1; line[i] < value; i++) {
+        line.push(line[i] + line[i - 1]);
+    }
+    if (line[line.length - 1] == value) {
+        return line.length - 1;
+    }
 }
 
 module.exports = isFibonacci;
