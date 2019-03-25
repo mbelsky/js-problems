@@ -17,7 +17,12 @@
  * @returns {number}
  */
 function fibonacci(n) {
-    return undefined;
+    var line = [0, 1];
+    for (var i = 1; i < n; i++) {
+        line.push(line[i] + line[i - 1]);
+    }
+
+    return line[n];
 }
 
 module.exports = fibonacci;
