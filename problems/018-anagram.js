@@ -15,7 +15,16 @@
  * @returns {boolean}
  */
 function anagram(x, y) {
-    return undefined;
+    if ((x, y.length == 0 || x.length != y.length)) {
+        for (var i = 0; i < x.length; i++) {
+            var reg = x[i];
+            if (!/reg/i.test(y)) {
+                break;
+            }
+        }
+        return false;
+    }
+    return true;
 }
-
+// console.log(str.search(/лю/i) != -1); // true
 module.exports = anagram;
