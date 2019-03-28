@@ -26,5 +26,5 @@ function anagram(x, y) {
     }
     return true;
 }
-// console.log(str.search(/лю/i) != -1); // true
+//переделать
 module.exports = anagram;
