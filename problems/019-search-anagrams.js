@@ -16,11 +16,8 @@ function anagram(x, y) {
     if ((x, y.length == 0 || x.length != y.length)) {
         return false;
     }
-
     for (var i = 0; i < x.length; i++) {
-        // var reg = x[i];
-        var reg = new RegExp(x[i], "i");
-        if (!reg.test(y)) {
+        if (!y.toLowerCase().includes(x[i].toLowerCase())) {
             return false;
         }
     }
