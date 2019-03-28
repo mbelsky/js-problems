@@ -16,13 +16,12 @@
  */
 function anagram(x, y) {
     if ((x, y.length == 0 || x.length != y.length)) {
-        for (var i = 0; i < x.length; i++) {
-            var reg = x[i];
-            if (!/reg/i.test(y)) {
-                break;
-            }
-        }
         return false;
+    }
+    for (var i = 0; i < x.length; i++) {
+        if (!y.toLowerCase().includes(x[i].toLowerCase())) {
+            return false;
+        }
     }
     return true;
 }
