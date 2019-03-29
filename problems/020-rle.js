@@ -11,23 +11,22 @@
  */
 function rle(value) {
     var count = 1;
-    var result = [];
-    var arrStr = value.split("");
-    for (var i = 0; i < arrStr.length; i++) {
-        var currentElement = arrStr[i];
-        var nextElement = arrStr[i + 1];
+    var result = "";
+    for (var i = 0; i < value.length; i++) {
+        var currentElement = value[i];
+        var nextElement = value[i + 1];
         if (currentElement === nextElement) {
             count += 1;
         } else {
             if (count > 1) {
-                result.push(count);
+                result += count;
             }
 
-            result.push(currentElement);
+            result += currentElement;
             count = 1;
         }
     }
-    return result.join("");
+    return result;
 }
 
 module.exports = rle;
