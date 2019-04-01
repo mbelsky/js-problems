@@ -15,15 +15,35 @@
  * @returns {boolean}
  */
 function anagram(x, y) {
-    if ((x, y.length == 0 || x.length != y.length)) {
+    if ((x, y.length === 0 || x.length !== y.length)) {
         return false;
     }
-    for (var i = 0; i < x.length; i++) {
-        if (!y.toLowerCase().includes(x[i].toLowerCase())) {
+    var objX = createObj(x);
+    var objY = createObj(y);
+
+    for (var key in objX) {
+        // if (key in objY) {
+
+        if (objX[key] !== objY[key]) {
             return false;
         }
     }
+
     return true;
 }
+
+function createObj(word) {
+    var obj = {};
+    for (var i = 0; i < word.length; i++) {
+        var key = word[i].toLowerCase();
+        if (key in obj) {
+            obj[key] += 1;
+        } else {
+            obj[key] = 1;
+        }
+    }
+    return obj;
+}
+
 //переделать
 module.exports = anagram;
