@@ -7,8 +7,8 @@
  * Пример:
  *
  * repair(1, 1, 3) === 1
- * repair(4, 4, 3) === 2
- * repair(4, 4, 4) === 2
+ * repair(4, 4, 3) === 3
+ * repair(4, 4, 4) === 4
  *
  * @param {number} width – ширина офиса
  * @param {number} length - длина офиса
