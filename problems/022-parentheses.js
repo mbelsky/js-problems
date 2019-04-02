@@ -16,7 +16,23 @@
  * @returns {boolean}
  */
 function parentheses(value) {
-    return undefined;
+    if (
+        value.length % 2 === 0 &&
+        value.length !== 0 &&
+        characters(value, "(") <= characters(value, ")")
+    ) {
+        return true;
+    } else return false;
+}
+
+function characters(string, symbol) {
+    var countSym = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === symbol) {
+            countSym += i;
+        }
+    }
+    return countSym;
 }
 
 module.exports = parentheses;
