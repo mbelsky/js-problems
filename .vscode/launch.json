@@ -10,7 +10,7 @@
             "request": "launch",
             "runtimeArgs": [
                 "--inspect-brk",
-                "${workspaceFolder}}/node_modules/.bin/jest",
+                "${workspaceFolder}/node_modules/.bin/jest",
                 "--runInBand",
                 "--onlyChanged"
             ],
