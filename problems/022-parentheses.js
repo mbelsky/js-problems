@@ -16,23 +16,26 @@
  * @returns {boolean}
  */
 function parentheses(value) {
-    if (
-        value.length % 2 === 0 &&
-        value.length !== 0 &&
-        characters(value, "(") <= characters(value, ")")
-    ) {
-        return true;
-    } else return false;
-}
+    var count = 0;
+    if (value.length === 0) return false;
+    for (var i = 0; i < value.length; i++) {
+        if (value[i] === "(") {
+            count += 1;
+        }
 
-function characters(string, symbol) {
-    var countSym = 0;
-    for (let i = 0; i < string.length; i++) {
-        if (string[i] === symbol) {
-            countSym += i;
+        if (value[i] === ")") {
+            if (count === 0) {
+                return false;
+            } else {
+                count -= 1;
+            }
         }
     }
-    return countSym;
+
+    if (count !== 0) {
+        return false;
+    }
+    return true;
 }
 
 module.exports = parentheses;
