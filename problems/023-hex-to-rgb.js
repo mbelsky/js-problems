@@ -14,7 +14,21 @@
  * @returns {string}
  */
 function hexToRgb(color) {
-    return undefined;
+    var cutcolor = color.substr(1);
+    if (cutcolor.length === 3) {
+        var large = "";
+        for (let i = 0; i < cutcolor.length; i++) {
+            const element = cutcolor[i];
+            large += element + element;
+        }
+    } else large = cutcolor;
+    //   var c = large.substr(0, 2);
+    var x = parseInt(large.substr(0, 2), 16);
+    var y = parseInt(large.substr(2, 2), 16);
+    var z = parseInt(large.substr(4, 2), 16);
+    var result = "rgb(" + x + ", " + y + ", " + z + ")";
+
+    return result;
 }
 
 module.exports = hexToRgb;
