@@ -31,6 +31,28 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "port": 9229
+        },
+        {
+            "name": "Debug",
+            "type": "node",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "runtimeArgs": [
+                "--inspect-brk",
+                "${workspaceFolder}/node_modules/.bin/jest",
+                "--runInBand",
+                "--onlyChanged"
+            ],
+            "windows": {
+                "runtimeArgs": [
+                    "--inspect-brk",
+                    "${workspaceFolder}/node_modules/jest/bin/jest.js",
+                    "--runInBand",
+                    "--onlyChanged"
+                ]
+            }
         }
     ]
 }
