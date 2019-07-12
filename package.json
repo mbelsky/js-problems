@@ -19,7 +19,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "lint-staged --relative"
         }
     },
     "lint-staged": {
@@ -30,6 +30,6 @@
     "devDependencies": {
         "husky": "^2.4.1",
         "jest": "^24.8.0",
-        "lint-staged": "^8.1.5"
+        "lint-staged": "^9.2.0"
     }
 }
