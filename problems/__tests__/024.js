@@ -8,6 +8,7 @@ test('Тестирование задачи "024-timeago"', () => {
     expect(timeago(19)).toBe('10 seconds ago');
     expect(timeago(20)).toBe('20 seconds ago');
     expect(timeago(29)).toBe('20 seconds ago');
+    expect(timeago(59)).toBe('50 seconds ago');
 
     expect(timeago(60)).toBe('1 minute ago');
     expect(timeago(119)).toBe('1 minute ago');
