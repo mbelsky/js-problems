@@ -10,7 +10,7 @@
  * Пример:
  *
  * fibonacci(2) === 1
- * fibonacci(3) === 3
+ * fibonacci(3) === 2
  * fibonacci(7) === 13
  *
  * @param {number} n >= 0
