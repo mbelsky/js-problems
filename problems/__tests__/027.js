@@ -16,6 +16,8 @@ test('Тестирование задачи "027-has"', () => {
     expect(has(['o', 'b'], testObject)).toBe(false);
     expect(has(['a.b.c'], testObject)).toBe(true);
     expect(has(['n'], testObject)).toBe(true);
+    expect(has(['b', 'a'], testObject)).toBe(false);
+    expect(has(['b', 'n'], testObject)).toBe(false);
 
     expect(has(['n'], {})).toBe(false);
     expect(has(['n'], null)).toBe(false);
