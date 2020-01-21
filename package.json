@@ -28,8 +28,8 @@
         ]
     },
     "devDependencies": {
-        "husky": "^2.4.1",
-        "jest": "^24.8.0",
-        "lint-staged": "^9.2.0"
+        "husky": "^2.7.0",
+        "jest": "^24.9.0",
+        "lint-staged": "^9.5.0"
     }
 }
