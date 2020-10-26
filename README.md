@@ -69,6 +69,7 @@ npm run test:watch
 
 Данный ресурс создавался, преимущественно, для тех, кто испытывает проблемы с английским языком. Невходящие в их число могут попробовать свои силы на следующих сайтах:
 
+-   [LeetCode](https://leetcode.com/problemset/all/)
 -   [Codewars](https://www.codewars.com/?language=javascript)
 -   [Hackerrank](https://www.hackerrank.com/dashboard)
 -   [CheckIO](https://js.checkio.org/)
