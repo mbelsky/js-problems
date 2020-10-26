@@ -8,7 +8,7 @@
 
 ## Предварительные настройки
 
-1. Убедись, что [git](https://git-scm.com/downloads) и [node](https://nodejs.org/en/download/) установлены на твоем компьютере
+1. Убедись, что [git](https://git-scm.com/downloads) и [node](https://nodejs.org/en/download/) v10.13.0+ установлены на твоем компьютере
 2. Склонируй репозиторий
 3. В папке с проектом из терминала выполни `npm install`
 
