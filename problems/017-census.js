@@ -9,7 +9,7 @@
  * census([{ age: 12, gender: 'Male' }, { age: 40, gender: 'Male' }]) === 2
  * census([{ age: 40, gender: 'Female' }]) === undefined
  *
- * @param {object[]} list
+ * @param {{age: number, gender: string}[]} list
  * @returns {undefined|number}
  */
 function census(list) {
