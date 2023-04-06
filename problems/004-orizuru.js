@@ -12,7 +12,7 @@
  *
  * computeOrizurus(6) === [1, 4, 1]
  * computeOrizurus(24) === [4, 16, 4]
- * computeOrizurus(11) === [1, 9, 1]
+ * computeOrizurus(60) === [10, 40, 10]
  *
  * @param {number} total общее количество сделанных журавликов
  * @returns {number[]} массив чисел, где первый элемент это количество журавликов сделанных Петей,
